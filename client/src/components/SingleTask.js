@@ -32,7 +32,7 @@ const SingleTask = ({ task, onDelete, onEdit, onMarkDone, onMarkUndone }) => {
     day: "numeric",
   };
 
-  const bgColor = task.done ? "blueviolet" : "aliceblue";
+  const bgColor = task.done ? "#f3e6ff" : "aliceblue";
 
   return (
     <ListItem m={2} w={"100%"} bgColor={bgColor} borderRadius={"lg"}>

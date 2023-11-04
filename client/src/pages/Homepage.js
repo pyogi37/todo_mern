@@ -37,21 +37,29 @@ const Homepage = () => {
           p={4}
           alignItems="center"
           boxShadow="base"
-          bg="lavender"
+          bg="black"
           w={"100vw"}
           h={"8vh"}
-          direction={isSmallScreen ? "column" : "row"} // Adjust direction for small screens
+          direction={"row"} // Adjust direction for small screens
         >
           <Text
             fontSize="lg"
-            color={"GrayText"}
-            textAlign={isSmallScreen ? "center" : "left"}
+            fontWeight={"semibold"}
+            color={"purple.400"}
+            textAlign={"left"}
           >
             Welcome, {user.name} !!
           </Text>
           <Spacer />
           {isSmallScreen && <Box p={2} /> /* Add space for small screens */}
-          <Button colorScheme="red" onClick={logoutHandler}>
+          <Button
+            variant={"outline"}
+            colorScheme="purple"
+            onClick={logoutHandler}
+            _hover={{
+              bg: "purple.400", // Change to your desired hover background color
+            }}
+          >
             Logout
           </Button>
         </Flex>
